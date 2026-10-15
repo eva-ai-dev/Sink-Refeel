@@ -210,7 +210,11 @@ async function aiOg() {
                 :model-value="formatPasswordDisplay(field.state.value)"
                 :placeholder="$t('links.form.password_placeholder')"
                 :type="isMaskedLinkPassword(field.state.value) ? 'text' : 'password'"
-                autocomplete="off"
+                autocomplete="new-password"
+                data-1p-ignore
+                data-lpignore="true"
+                data-bwignore
+                data-form-type="other"
                 @blur="field.handleBlur"
                 @input="field.handleChange(($event.target as HTMLInputElement).value)"
               />
